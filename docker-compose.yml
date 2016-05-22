@@ -1,8 +1,8 @@
 rtorrent:
-  image: "chamunks/alpine-rtorrent:latest"
+  image: "alpine-rtorrent"
   volumes:
-    - "./downloads/:/data/downloads/"
-    - "./torrents/:/data/torrents/"
+    - "./downloads/:/rtorrent/downloads/"
+    - "./log/:/rtorrent/log/"
+    - "./.session/:/rtorrent/.session/"
   expose:
-    - "6881"
     - "49264"
